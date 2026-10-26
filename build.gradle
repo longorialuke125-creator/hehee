@@ -1,0 +1,17 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}" // 26.1+ is unobfuscated: no mappings, no remap
+}
+
+version = project.mod_version
+base.archivesName = 'betledger'
+
+repositories {}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+tasks.withType(JavaCompile).configureEach { options.release = 25 }
+java { sourceCompatibility = JavaVersion.VERSION_25; targetCompatibility = JavaVersion.VERSION_25 }

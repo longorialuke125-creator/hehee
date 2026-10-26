@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "betledger",
+  "version": "1.0.0",
+  "name": "BetLedger",
+  "description": "Client-side /pay gambling tracker: sessions, per-player rakeback, live HUD, large-pay confirmation.",
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": { "client": ["dev.betledger.BetLedger"] },
+  "depends": {
+    "fabricloader": ">=0.19.2",
+    "minecraft": "~26.1",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
